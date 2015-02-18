@@ -1,0 +1,17 @@
+{
+    "head": "",
+    "body": {
+        "view" : "main-wrapper",
+        "rightcolumn" : [{
+              "view" : "post",
+              "title" : "titulo ;D",
+              "content" : "Conteudo da noticia ;D"
+        }, {
+              "view" : "post",
+              "title" : "titulo ;D",
+              "content" : "Conteudo da noticia ;D"
+              
+        }]
+    }
+}   
+  
