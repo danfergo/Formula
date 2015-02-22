@@ -42,14 +42,18 @@ function inflate_node($data) {
 function build_page($u) {
     $url = $u === "" ? 'index' : $u;
 
-    $page = json_decode(get_resource('pages/' . $url));
-    $page->view = 'html'; //default/base page template.
-
-    return inflate_node($page);
+    $page = get_resource('pages/' . $url);
+    if(gettype($page) === 'object'){
+        $page->view = 'html'; //default/base page template.
+        return inflate_node($page);
+    }else {
+        return $page;
+    }
 }
 
 
 
 function buld_and_print_page($url) {
-    echo build_page($url);
+    $page = build_page($url);
+    echo $page ;
 }
